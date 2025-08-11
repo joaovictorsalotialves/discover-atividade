@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-gray-100: #DAE4F2;
+  --color-gray-400: #6F7D90;
+  --color-gray-600: #21252C;
+  --color-gray-800: #13161B;
+  --color-gray-900: #0F1216;
+}
+
+body {
+  background: var(--color-gray-900) url('./assets/background.png') no-repeat top/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--color-gray-100);
+}
+
+#container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 56px;
+}
+
+.content {
+  width: 100%;
+}
+
+/* profile */
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+#profile #img-profile {
+  font-size: 100px;
+}
+
+/* links */
+#links {
+  display: flex;
+  justify-content: center;
+}
+
+#links ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 50%;
+  padding: 24px 0px;
+}
+
+#links ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 36px;
+
+  background: var(--color-gray-800);
+  border: 1px solid var(--color-gray-400);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+#links ul li a:hover,
+#links ul li a:focus {
+  background: var(--color-gray-400);
+  border: 1px solid var(--color-gray-100);
+}
+
+/* social links */
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  border-radius: 50%;
+
+  transition: background 0.2s;
+}
+
+#social-links a:hover,
+#social-links a:focus {
+  background: var(--color-gray-600);
+}
+
+footer {
+  font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+  #links ul {
+    width: 30%;
+  }
+}
